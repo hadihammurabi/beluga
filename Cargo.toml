@@ -1,0 +1,17 @@
+workspace = { members = ["beluga-app", "beluga-core"] }
+
+[package]
+name = "beluga"
+version = "0.1.0"
+edition = "2021"
+authors = ["Chandra needkopi@gmail.com"]
+default-run = "beluga"
+
+[[bin]]
+name = "beluga"
+path = "beluga-app/src/bin/beluga.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+floem = { git = "https://github.com/lapce/floem.git", branch = "main", features=["editor"] }
