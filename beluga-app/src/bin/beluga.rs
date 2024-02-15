@@ -1,5 +1,8 @@
 use beluga_app::app;
 
-fn main() {
-    app::launch();
+pub fn main() {
+    let result = app::launch();
+    if let Err(error) = result {
+        eprintln!("Error: {}", error);
+    }
 }
