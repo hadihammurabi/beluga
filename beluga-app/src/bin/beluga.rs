@@ -1,5 +1,8 @@
-use beluga_app::app;
+extern crate iced;
 
-pub fn main() -> iced::Result {
+use beluga_app::app;
+use iced::Result;
+
+pub fn main() -> Result {
     app::launch()
 }
