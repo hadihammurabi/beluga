@@ -1,8 +1,8 @@
-extern crate iced;
-
 use beluga_app::app;
-use iced::Result;
 
-pub fn main() -> Result {
-    app::launch()
+pub fn main() {
+    let result = app::launch();
+    if let Err(error) = result {
+        eprintln!("Error: {}", error);
+    }
 }
