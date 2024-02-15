@@ -1,0 +1,26 @@
+[package]
+name = "beluga"
+version = "0.1.0"
+edition = "2021"
+default-run = "beluga"
+
+[[bin]]
+name = "beluga"
+path = "beluga-app/src/bin/beluga.rs"
+
+[dependencies]
+beluga-app = { path = "./beluga-app" }
+
+[workspace]
+members = ["beluga-app", "beluga-core"]
+
+[workspace.dependencies]
+iced = { git = "https://github.com/iced-rs/iced.git", branch = "master", features = [
+    "highlighter",
+    "tokio",
+    "debug",
+    "canvas",
+] }
+tokio = { version = "1.36.0", features = ["fs"] }
+
+rfd = "0.13"
